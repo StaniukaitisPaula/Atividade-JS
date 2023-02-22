@@ -36,14 +36,24 @@ entradaDados.question('Digite o primeiro Número Inicial  [ entre 0 - 500 ]: \n'
                 entradaDados.close()
 
             } else {
-                entradaDados.question('Você deseja calcular como?\n PAR\n  IMPAR\n  AMBOS\n', function(value) {
+                entradaDados.question('Você deseja calcular como? \n[IMPAR] [PAR] [AMBOS]: ',
+                    function(escolha) {
+                        let escolhas = escolha.toUpperCase()
+                        if (escolhas == '') {
+                            console.log('ERRO: não é possível localizar os impares e pares a escolha.')
+                            entradaDados.close()
+                        } else if (escolhas != 'IMPAR' && escolhas!= 'PAR' && escolhas!= 'AMBOS') {
 
-             calculo.imparOuPar(valorInicial, valorFinal, soma)
-             entradaDados.close()
+                            console.log('ERRO: escolha inválida, digite apenas [IMPAR] [PAR] [AMBOS]')
+                            entradaDados.close()
+                        } else { 
+                            calculo.imparOuPar(valorInicial, valorFinal, escolhas)
+                            entradaDados.close()  
 
+                      }
+                 })
+             }
         })
-    }
-    })
-
-    }
+     }
 })
+
