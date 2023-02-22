@@ -1,9 +1,9 @@
-const imparOuPar = function(numeroInicial, numeroFinal, solicitado) {
+const imparOuPar = function(numeroInicial, numeroFinal, somaTotal) {
     let valorInicial = numeroInicial
     let valorFinal = numeroFinal
-    let Solicitacao = solicitado.toUpperCase()
+    let soma = somaTotal
 
-    if (tipoSolicitado == 'PAR') {
+    if (soma == 'PAR') {
         console.log(`---------------${numeroSolicitado}---------------`)
         while (valorInicial <= valorFinal) {
             resultado = valorInicial % 2
@@ -12,7 +12,7 @@ const imparOuPar = function(numeroInicial, numeroFinal, solicitado) {
             }
             valorInicial++
         }
-    } else if (tipoSolicitado == 'IMPAR') {
+    } else if (soma == 'IMPAR') {
         console.log(`---------------${numeroSolicitado}---------------`)
         while (valorInicial <= valorFinal) {
             resultado = valorInicial % 2

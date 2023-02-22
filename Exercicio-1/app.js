@@ -78,15 +78,16 @@ entradaDados.question('Nome do Aluno(a): \n', function(nome) {
                                             entradaDados.close()
 
                                         } else if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4)) {
-                                            console.log('ERRO: O texto digitado não é um número')
+                                            console.log('ERRO: O texto digitado não é um número!!')
                                             entradaDados.close()
 
-                                        } else if (nota1 < 0 || nota1 > 100 || nota2 < 0 || nota2 > 100 || nota3 < 0 ||
+                                        } else if  (nota1 < 0 || nota1 > 100 || nota2 < 0 || nota2 > 100 || nota3 < 0 ||
                                             nota3 > 100 || nota4 < 0 || nota4 > 100) {
 
                                             console.log('ERRO: O Sistema aceita somente números entre 0 - 100')
                                             entradaDados.close()
-                                        }
+
+                                        } else {
 
 
                                         if (resultado >= 70) {
@@ -171,10 +172,11 @@ entradaDados.question('Nome do Aluno(a): \n', function(nome) {
                                                         console.log(`Nota final com Exame: ${resultadoEx}`)
                                                         entradaDados.close()
 
-                                                    }
-                                                }
-                                            })
-                                        }
+                                                      }
+                                                 }
+                                             })
+                                            }
+                                       }
                                     })
                                 })
                             })
